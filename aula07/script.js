@@ -1,20 +1,19 @@
-function soma() {
-    var campo1 = document.getElementById("campo1");
-    var campo2 = document.getElementById("campo2");
-    var resultado = document.getElementById("resultado");
+function calcular(){
 
+    var pao = document.getElementById("pao").value;
+    var bolo = document.getElementById("bolo").value;
+    var cafe = document.getElementById("cafe").value;
 
-    resultado.innerHTML = "Resultado: " + (Number(campo1.value) + Number(campo2.value));
-}
+    var valorPao = 1;
+    var valorBolo = 15;
+    var valorCafe = 5;
 
-function addItem() {
-    var campo_tarefas = document.getElementById("campo_tarefas");
-    var lista = document.getElementById("Lista");
-    var Item = document.createElement("li");
+    
+    var total =
+        (pao * valorPao) +
+        (bolo * valorBolo) +
+        (cafe * valorCafe);
 
-    Item.innerHTML = campo_tarefas.value
-
-    lista.appendChild(Item);
-
-    campo_tarefas.value = "";
+    document.getElementById("resultado").innerHTML =
+        "Total: R$ " + total.toFixed(2);
 }
