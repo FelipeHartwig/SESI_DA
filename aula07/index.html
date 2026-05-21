@@ -1,38 +1,42 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <title>Padaria</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Orçamento de Tênis</title>
+
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <div class="container">
-        <h1>TENIS</h1>
+  <div class="container">
 
-        <h2>Monte seu orçamento</h2>
+    <h1>Orçamento de Tênis</h1>
 
-        <div class="produto">
-            <label for="pao">raquete de tenis</label>
-            <input type="number" id="pao" min="0" value="0">
-        </div>
+    <label>Nome do cliente</label>
+    <input type="text" id="cliente">
 
-        <div class="produto">
-            <label>Bolinha de Tenis</label>
-            <input type="number" id="bolo" min="0" value="0">
-        </div>
+    <label>Produto</label>
+    <select id="produto">
+      <option value="450">Raquete - R$450</option>
+      <option value="35">Bolinha de Tênis - R$35</option>
+      <option value="25">Overgrip - R$25</option>
+    </select>
 
-        <div class="produto">
-            <label>Overgrip (20,00R$)</label>
-            <input type="number" id="cafe" min="0" value="0">
-        </div>
+    <label>Quantidade</label>
+    <input type="number" id="quantidade" value="1">
 
-        <button onclick="calcular()">Calcular Total</button>
+    <button onclick="calcularOrcamento()">
+      Calcular orçamento
+    </button>
 
-        <h2 id="resultado">Total: R$ 0,00</h2>
+    <div class="resultado" id="resultado">
+      O orçamento aparecerá aqui.
     </div>
 
-    <script src="script.js"></script>
+  </div>
+
+  <script src="script.js"></script>
 
 </body>
 </html>

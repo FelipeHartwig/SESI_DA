@@ -1,19 +1,23 @@
-function calcular(){
+function calcularOrcamento(){
 
-    var pao = document.getElementById("pao").value;
-    var bolo = document.getElementById("bolo").value;
-    var cafe = document.getElementById("cafe").value;
+  let cliente = document.getElementById("cliente").value;
 
-    var valorPao = 1;
-    var valorBolo = 15;
-    var valorCafe = 5;
+  let produto = document.getElementById("produto");
 
-    
-    var total =
-        (pao * valorPao) +
-        (bolo * valorBolo) +
-        (cafe * valorCafe);
+  let valor = Number(produto.value);
 
-    document.getElementById("resultado").innerHTML =
-        "Total: R$ " + total.toFixed(2);
+  let nomeProduto =
+    produto.options[produto.selectedIndex].text;
+
+  let quantidade =
+    Number(document.getElementById("quantidade").value);
+
+  let total = valor * quantidade;
+
+  document.getElementById("resultado").innerHTML = `
+    <strong>Cliente:</strong> ${cliente} <br>
+    <strong>Produto:</strong> ${nomeProduto} <br>
+    <strong>Total:</strong> R$ ${total}
+  `;
+
 }
